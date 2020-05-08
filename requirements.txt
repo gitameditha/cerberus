@@ -1,0 +1,8 @@
+#Package for API Testing
+robotframework-requests==0.6.3
+
+#Package for Web Testing
+robotframework-seleniumlibrary==4.3.0
+
+#Package for FakerLibrary
+robotframework-faker==5.0.0
