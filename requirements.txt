@@ -4,5 +4,8 @@ robotframework-requests==0.6.3
 #Package for Web Testing
 robotframework-seleniumlibrary==4.3.0
 
+#Package for Mobile App Testing
+robotframework-appiumlibrary==1.5.0.4
+
 #Package for FakerLibrary
 robotframework-faker==5.0.0

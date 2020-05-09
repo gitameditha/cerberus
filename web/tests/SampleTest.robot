@@ -1,5 +1,5 @@
 *** Settings ***
-Resource          ../../utils/KeywordsExtension.robot
+Resource          ../../utils/_UTILS_IMPORT.robot
 Resource          ../config.robot
 Resource          ../pages/_PAGES_IMPORT.robot
 Resource          ../logics/_LOGICS_IMPORT.robot
