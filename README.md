@@ -1,28 +1,36 @@
-# Problem Statement 1
-## Automation Test using RobotFramework
+# Cerberus
+### Terminology
+<br>
+<p align="center">
+  <img src="https://mitosmythgreekhome.files.wordpress.com/2019/07/cerberus.jpg?w=1222" width="300">
+</p>
 
-This automation test script using RobotFramework. For Web Testing we used builtin library `Selenium Library`
+In Greek mythology, Cerberus is a multi-headed dog that guards the gates of the Underworld to prevent the dead from leaving
 
-### Setup
-#### Install RobotFramework
+In this project terms, Cerberus is the repository for the testing framework of three main platform Web Browser, Mobile Apps (Android) and API
+
+This automation test script using RobotFramework. For Web Testing we used builtin library `Selenium Library`, for Mobile Apps Testing we used builtin library `Appium Library`, and for API Testing we used builtin library `Request Library`
+
+## Setup
+### Install RobotFramework
 Since RobotFramework based on Python, make sure it already installed.
 On this project using `python 3.7.3`
 
-#### Initiate Virtual Environment
+### Initiate Virtual Environment
 ```bash
 virtualenv -p python3 env
 ```
 
-#### Activate Virtual Environment
+### Activate Virtual Environment
 ```bash
 source env/bin/activate
 ```
-#### Install Library Dependencies
+### Install Library Dependencies
 Run this script for install RobotFramework and libraries
 ```bash
 pip install -r requirement.txt
 ```
-### Usage
+## Usage
 Run this script for running test based on 'Test Case Name'
 ```bash
 robot -t "[TEST CASE NAME]" [PATH TO TEST FILE NAME]
@@ -32,34 +40,9 @@ Run this script for running all test on suite
 ```bash
 robot [PATH TO TEST FILE NAME]
 ```
-e.g : `robot web/tests/`
+e.g : `robot api/tests/` or `robot android/tests/` or `robot web/tests/`
 
 After finished, it will generate `Output File`, `Log File` and `Report File`.
+
+## Report
 You can access the Log report by open file `log.html` on browser
-
-# Problem Statement 2
-This automation test using `python 3.7.3` script with `request` and `json` libraries.
-
-### Setup
-#### Initiate Virtual Environment
-```bash
-virtualenv -p python3 env
-```
-
-#### Activate Virtual Environment
-```bash
-source env/bin/activate
-```
-#### Install Library Dependencies
-Run this script for install RobotFramework and libraries
-```bash
-pip install -r requirement.txt
-```
-### Usage
-Run this script for running test
-```bash
-python compare_files.py ${PATH_TO_FILE_A} ${PATH_TO_FILE_B}
-```
-e.g : `python scripts/compare_files.py files/sample_c.txt files/sample_d.txt`
-
-It will be error if we not input two files on the argument. Also will error if we set the wrong path file (File Not Found).
