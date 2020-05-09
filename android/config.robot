@@ -6,10 +6,10 @@ Library     Collections
 
 *** Variables ***
 ${APPIUM_SERVER}      http://localhost:4729/wd/hub
-${UDID}               YPW89LB6HIGIIJDE
+${UDID}               Put Your Device ID Here
 ${PORT}               4729
 ${BOOTSTRAP_PORT}     50009
-${SOURCE_PATH}        /Users/yayankuswara/Workspace/learning/robotframework/cerberus
+${SOURCE_PATH}        Put Your Source Path Here
 ${APK_PATH}           ${SOURCE_PATH}/files/sample.apk
 ${APP_PACKAGE}        com.loginmodule.learning
 # ${APP_ACTIVITY}       ${APP_PACKAGE}.activities.LoginActivity
