@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install Requirements
-        run: ls- la
+        run: ls
 
       - name: Install Requirements
         run: pip install -r requirements.txt
