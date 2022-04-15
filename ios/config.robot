@@ -33,3 +33,6 @@ Spawn Appium Server
 *** Test Cases ***
 XXX
   log to console    TEST
+
+YYY
+  log to console    TEST
