@@ -36,6 +36,3 @@ XXX
 
 YYY
   log to console    TEST
-
-ZZZ
-  Invalid Keywords
