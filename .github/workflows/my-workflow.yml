@@ -7,15 +7,9 @@ jobs:
   run-dry-run:
     runs-on: ubuntu-latest
     steps:
-      - name: PWD
-        run: pwd
-        
-#       - name: Activate Virtual Environment
-#         run: source env/bin/activate
+      - name: Install Requirements
+        run: pip install -r requirements.txt
 
-#       - name: Install Requirements
-#         run: pip install -r requirements.txt
-
-#       - name: Execute Dry Run
-#         run: robot --dryrun web/tests/FailedDryRun.robot
+      - name: Execute Dry Run
+        run: robot --dryrun web/tests/FailedDryRun.robot
 
