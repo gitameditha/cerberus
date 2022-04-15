@@ -7,13 +7,21 @@ jobs:
   run-dry-run:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: Install Requirements
-        run: ls -la
+      - name: Checkout Repository
+        uses: actions/checkout@v3
 
       - name: Install Requirements
         run: pip install -r requirements.txt
 
-      - name: Execute Dry Run
-        run: robot --dryrun web/tests/FailedDryRun.robot
+      - name: Execute Dry Run for API
+        run: robot --dryrun api
+      
+      - name: Execute Dry Run for Web
+        run: robot --dryrun web
+        
+      - name: Execute Dry Run for Android
+        run: robot --dryrun web
+        
+      - name: Execute Dry Run for iOS
+        run: robot --dryrun ios
 
