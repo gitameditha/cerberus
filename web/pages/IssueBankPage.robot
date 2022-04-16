@@ -17,7 +17,7 @@ Verify Card Number
 Verify Field Password
   ${locator}=   Set Variable    id=PaRes
   Wait Until Element Is Visible   ${locator}
-  [Return]      ${locator}
+  RETURN      ${locator}
 
 Input Field Password
   [Arguments]   ${password}
@@ -28,7 +28,7 @@ Input Field Password
 Verify Button OK
   ${locator}=   Set Variable       //button[@class='btn btn-sm btn-success']
   Wait Until Element Is Visible    ${locator}
-  [Return]    ${locator}
+  RETURN    ${locator}
 
 Click Button OK
   ${locator}=   Verify Button OK

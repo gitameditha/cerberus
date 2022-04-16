@@ -8,6 +8,7 @@ Suite Setup       Open Midtrans Website
 Test Setup        Go To    url=${URL}
 Suite Teardown    Close All Browsers
 
+
 *** Test Case ***
 Success Credit Card Payment
   ${user}=        Generate User Data

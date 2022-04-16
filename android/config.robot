@@ -1,8 +1,7 @@
 *** Settings ***
-Library     AppiumLibrary   run_on_failure=Log And Capture Error
 Library     Process
 Library     Collections
-
+Library     AppiumLibrary
 
 *** Variables ***
 ${APPIUM_SERVER}      http://localhost:4729/wd/hub

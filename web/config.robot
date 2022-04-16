@@ -3,6 +3,7 @@ Library     String
 Library     SeleniumLibrary    run_on_failure=Log And Capture Error    screenshot_root_directory=screenshot
 Library     FakerLibrary
 
+
 *** Variables ***
 ${BROWSER}            Chrome
 ${URL}                https://demo.midtrans.com/
@@ -24,6 +25,7 @@ ${PROMO}              Potongan 10 Rupiah
 
 ${MERCHANT}           Rubicon Store${SPACE}
 
+
 *** Keywords ***
 Open Midtrans Website
   Open Browser    url=${URL}    browser=${BROWSER}
@@ -41,11 +43,11 @@ Generate User Data
   ...   EMAIL=${email}    PHONE=+62${phoneNumber}
   ...   CITY=${city}      ADDRESS=${address}
   ...   POSTCODE=${postalCode}
-  [Return]    ${USER}
+  RETURN    ${USER}
 
 Convert Price To Integer
   [Arguments]   ${price}
   ${price}=   Remove String    ${price}    - Rp
   ${price}=   Remove String    ${price}    ,
   Convert To Integer    ${price}
-  [Return]    ${price}
+  RETURN    ${price}

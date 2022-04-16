@@ -1,16 +1,16 @@
 *** Keywords ***
 Get Item Name
   ${item}=    Get Text    css=.title
-  [Return]    ${item}
+  RETURN    ${item}
 
 Get Item Price
   ${price}=    Get Text    //span[@data-reactid='.0.0.0.2.0.0.2.1']
-  [Return]    ${price}
+  RETURN    ${price}
 
 Verify Button Buy Now
   ${locator}=   Set Variable       css=.buy
   Wait Until Element Is Visible    ${locator}
-  [Return]    ${locator}
+  RETURN    ${locator}
 
 Click Button Buy Now
   ${locator}=   Verify Button Buy Now
