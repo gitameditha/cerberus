@@ -17,4 +17,4 @@ Click Button Buy Now
   Click Element    ${locator}
 
 Verify Notification Payment Success
-  Wait Until Element Is Visible   //div[@class='trans-status trans-success']    timeout=10
+  Wait Until Element Is Visible   //div[@class='center desc']    timeout=10
