@@ -24,7 +24,7 @@ Open Tab
 Ensure Selected Tab
   [Arguments]   ${tab}
   ${status}=    Run Keyword And Return Status    Verify Selected Tab    tab=${tab}    timeout=1
-  Run Keyword If    '${status}'=='${FALSE}'    Open Tab    ${tab}
+  IF    '${status}'=='${FALSE}'    Open Tab    ${tab}
 
 Open Payment Method
   Click Button Continue

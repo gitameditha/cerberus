@@ -8,7 +8,7 @@ Verify Apps Version
 Verify Email Field
   ${locator}=   Set Variable    id=textInputEditTextEmail
   Wait Until Page Contains Element    ${locator}    timeout=${FAST_TIMEOUT}   error='Email' Field not visible on Login Page
-  [Return]    ${locator}
+  RETURN    ${locator}
 
 Set Email Field
   [Arguments]   ${email}
@@ -19,7 +19,7 @@ Set Email Field
 Verify Password Field
   ${locator}=   Set Variable    id=textInputEditTextPassword
   Wait Until Page Contains Element    ${locator}    timeout=${FAST_TIMEOUT}   error='Password' Field not visible on Login Page
-  [Return]    ${locator}
+  RETURN    ${locator}
 
 Set Password Field
   [Arguments]   ${password}
@@ -30,7 +30,7 @@ Set Password Field
 Verify Login Button
   ${locator}=   Set Variable    id=appCompatButtonLogin
   Wait Until Page Contains Element    ${locator}    timeout=${FAST_TIMEOUT}   error='Login' Button not visible on Login Page
-  [Return]    ${locator}
+  RETURN    ${locator}
 
 Click Login Button
   ${locator}=   Verify Login Button
@@ -39,7 +39,7 @@ Click Login Button
 Verify Register Link
   ${locator}=   Set Variable    id=textViewLinkRegister
   Wait Until Page Contains Element    ${locator}    timeout=${FAST_TIMEOUT}   error='Register' Link not visible on Login Page
-  [Return]    ${locator}
+  RETURN    ${locator}
 
 Click Register Link
   ${locator}=   Verify Register Link

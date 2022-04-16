@@ -2,7 +2,7 @@
 Verify Button Close
   ${locator}=   Set Variable    css=.header-back
   Wait Until Element Is Visible   ${locator}
-  [Return]      ${locator}
+  RETURN      ${locator}
 
 Click Button Close
   ${locator}=   Verify Button Close
@@ -13,7 +13,7 @@ Verify Logo Store
 
 Get Total Price
   ${price}=     Get Text    css=.text-amount-amount
-  [Return]      ${price}
+  RETURN      ${price}
 
 Verify Amount
   [Arguments]   ${amount}
@@ -24,7 +24,7 @@ Verify Tab
   [Arguments]   ${tab}
   ${locator}=   Set Variable    //li/a/span[.='${tab}']
   Wait Until Element Is Visible   ${locator}
-  [Return]    ${locator}
+  RETURN    ${locator}
 
 Click Tab
   [Arguments]   ${tab}
@@ -58,7 +58,7 @@ Verify Address
 Verify Button Continue
   ${locator}=   Set Variable    css=.button-main
   Wait Until Element Is Visible   ${locator}
-  [Return]      ${locator}
+  RETURN      ${locator}
 
 Click Button Continue
   ${locator}=   Verify Button Continue

@@ -2,7 +2,7 @@
 Verify Button Back
   ${locator}=   Set Variable    css=.header-prev
   Wait Until Element Is Visible   ${locator}
-  [Return]      ${locator}
+  RETURN      ${locator}
 
 Click Button Back
   ${locator}=   Verify Button Back
@@ -11,7 +11,7 @@ Click Button Back
 Verify Field Card Number
   ${locator}=   Set Variable    name=cardnumber
   Wait Until Element Is Visible   ${locator}
-  [Return]      ${locator}
+  RETURN      ${locator}
 
 Input Field Card Number
   [Arguments]   ${number}
@@ -22,7 +22,7 @@ Input Field Card Number
 Verify Field Expiry Date
   ${locator}=   Set Variable    css=[placeholder='MM / YY']
   Wait Until Element Is Visible   ${locator}
-  [Return]      ${locator}
+  RETURN      ${locator}
 
 Input Field Expiry Date
   [Arguments]   ${date}
@@ -33,7 +33,7 @@ Input Field Expiry Date
 Verify Field CVV
   ${locator}=   Set Variable    css=[placeholder='123']
   Wait Until Element Is Visible   ${locator}
-  [Return]      ${locator}
+  RETURN      ${locator}
 
 Input Field CVV
   [Arguments]   ${cvv}
@@ -45,7 +45,7 @@ Verify Checkbox Promo
   [Arguments]   ${promo}
   ${locator}=   Set Variable    //div[@class='checkbox checkbox-left']/label[text()='${promo}']
   Wait Until Element Is Visible   ${locator}
-  [Return]      ${locator}
+  RETURN      ${locator}
 
 Select Checkbox Promo
   [Arguments]   ${promo}
@@ -60,12 +60,12 @@ Verify Selected Checkbox Promo
 Get Promo Price
   [Arguments]   ${promo}
   ${price}=   Get Text    //div[@class='checkbox checkbox-left']/label[text()='${promo}']/span
-  [Return]      ${price}
+  RETURN      ${price}
 
 Verify Button Pay Now
   ${locator}=   Set Variable    //a[@class='button-main-content']
   Wait Until Element Is Visible   ${locator}
-  [Return]      ${locator}
+  RETURN      ${locator}
 
 Click Button Pay Now
   ${locator}=   Verify Button Pay Now

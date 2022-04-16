@@ -2,7 +2,7 @@
 Verify Button Back
   ${locator}=   Set Variable    css=.header-prev
   Wait Until Element Is Visible   ${locator}
-  [Return]      ${locator}
+  RETURN      ${locator}
 
 Click Button Back
   ${locator}=   Verify Button Back
@@ -12,7 +12,7 @@ Verify Payment Method
   [Arguments]   ${method}
   ${locator}=   Set Variable    //div[.='${method}']
   Wait Until Element Is Visible   ${locator}
-  [Return]      ${locator}
+  RETURN      ${locator}
 
 Click Payment Method
   [Arguments]   ${method}

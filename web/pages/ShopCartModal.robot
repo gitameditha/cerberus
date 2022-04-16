@@ -5,7 +5,7 @@ Verify Shopping Cart Modal
 Verify Field Name
   ${locator}=   Set Variable      //input[@data-reactid='.0.0.1.0.3.0.0.0.1.0']
   Wait Until Element Is Visible   ${locator}
-  [Return]      ${locator}
+  RETURN      ${locator}
 
 Input Field Name
   [Arguments]     ${name}
@@ -16,7 +16,7 @@ Input Field Name
 Verify Field Email
   ${locator}=   Set Variable   //input[@data-reactid='.0.0.1.0.3.0.0.1.1.0']
   Wait Until Element Is Visible   ${locator}
-  [Return]      ${locator}
+  RETURN      ${locator}
 
 Input Field Email
   [Arguments]   ${email}
@@ -26,7 +26,7 @@ Input Field Email
 Verify Field Phone Number
   ${locator}=   Set Variable   //input[@data-reactid='.0.0.1.0.3.0.0.2.1.0']
   Wait Until Element Is Visible   ${locator}
-  [Return]      ${locator}
+  RETURN      ${locator}
 
 Input Field Phone Number
   [Arguments]   ${phoneNumber}
@@ -36,7 +36,7 @@ Input Field Phone Number
 Verify Field City
   ${locator}=   Set Variable   //input[@data-reactid='.0.0.1.0.3.0.0.3.1.0']
   Wait Until Element Is Visible   ${locator}
-  [Return]      ${locator}
+  RETURN      ${locator}
 
 Input Field City
   [Arguments]   ${city}
@@ -46,7 +46,7 @@ Input Field City
 Verify Field Address
   ${locator}=   Set Variable   //textarea[@data-reactid='.0.0.1.0.3.0.0.4.1.0']
   Wait Until Element Is Visible   ${locator}
-  [Return]      ${locator}
+  RETURN      ${locator}
 
 Input Field Address
   [Arguments]   ${address}
@@ -56,7 +56,7 @@ Input Field Address
 Verify Field Postal Code
   ${locator}=   Set Variable   //input[@data-reactid='.0.0.1.0.3.0.0.5.1.0']
   Wait Until Element Is Visible   ${locator}
-  [Return]      ${locator}
+  RETURN      ${locator}
 
 Input Field Postal Code
   [Arguments]   ${postalCode}
@@ -66,7 +66,7 @@ Input Field Postal Code
 Verify Button Checkout
   ${locator}=   Set Variable       //div[@class='cart-checkout'][.='CHECKOUT']
   Wait Until Element Is Visible    ${locator}
-  [Return]    ${locator}
+  RETURN    ${locator}
 
 Click Button Checkout
   ${locator}=   Verify Button Checkout
@@ -75,7 +75,7 @@ Click Button Checkout
 Verify Button Setting
   ${locator}=   Set Variable       css=.cart-checkout-settings
   Wait Until Element Is Visible    ${locator}
-  [Return]    ${locator}
+  RETURN    ${locator}
 
 Click Button Setting
   ${locator}=   Verify Button Setting
@@ -84,7 +84,7 @@ Click Button Setting
 Verify Button Start
   ${locator}=   Set Variable       css=.btn-primary
   Wait Until Element Is Visible    ${locator}
-  [Return]    ${locator}
+  RETURN    ${locator}
 
 Click Button Start
   ${locator}=   Verify Button Start
