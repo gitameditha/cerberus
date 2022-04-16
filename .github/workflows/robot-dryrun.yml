@@ -5,7 +5,7 @@ on:
   pull_request:
 
 jobs:
-  run-dry-run:
+  execute-dry-run:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
