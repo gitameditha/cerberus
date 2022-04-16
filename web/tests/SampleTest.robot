@@ -15,13 +15,13 @@ Success Credit Card Payment
   ${itemPrice}=   Get Item Price
   Buy Item
 
-  Submit Form User          ${user}
-  Verify Order Details      ${itemName}    ${itemPrice}
-  Verify Shipping Details   ${USER}
+  Submit Form User                  ${user}
+  Verify Order Details              ${itemName}    ${itemPrice}
+  Verify Shipping Details           ${USER}
   Open Payment Method
-  Pick Payment Method           Credit Card
-  Fill User Credit Card Data    ${VALID_CC}
-  Pick Promo                    Visa
+  Pick Payment Method               ${PAYMENT_METHOD}
+  Fill User Credit Card Data        ${VALID_CC}
+  Pick Promo                        ${PROMO}
   Submit Payment with Credit Card
   Verify Notification Payment Success
 
@@ -31,11 +31,11 @@ Failed Credit Card Payment
   ${itemPrice}=   Get Item Price
   Buy Item
 
-  Submit Form User          ${user}
-  Verify Order Details      ${itemName}    ${itemPrice}
-  Verify Shipping Details   ${USER}
+  Submit Form User                  ${user}
+  Verify Order Details              ${itemName}    ${itemPrice}
+  Verify Shipping Details           ${USER}
   Open Payment Method
-  Pick Payment Method           Credit Card
-  Fill User Credit Card Data    ${INVALID_CC}
-  Pick Promo                    Visa
+  Pick Payment Method               ${PAYMENT_METHOD}
+  Fill User Credit Card Data        ${INVALID_CC}
+  Pick Promo                        ${PROMO}
   Submit Payment with Credit Card

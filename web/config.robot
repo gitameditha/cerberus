@@ -1,22 +1,28 @@
 *** Settings ***
+Library     String
 Library     SeleniumLibrary    run_on_failure=Log And Capture Error    screenshot_root_directory=screenshot
 Library     FakerLibrary
-Library     String
 
 *** Variables ***
-${BROWSER}      Chrome
-${URL}          https://demo.midtrans.com/
-${IFRAME}       snap-midtrans
+${BROWSER}            Chrome
+${URL}                https://demo.midtrans.com/
+${IFRAME}             snap-midtrans
 
-&{VALID_CC}     NUMBER=4811111111111114
-...             EXPIRY=0720
-...             CVV=123
+${PAYMENT_METHOD}     Credit/Debit Card
 
-&{INVALID_CC}   NUMBER=4911111111111113
-...             EXPIRY=0720
-...             CVV=123
+&{VALID_CC}           NUMBER=4811111111111114
+...                   EXPIRY=0726
+...                   CVV=123
 
-${OTP}          112233
+&{INVALID_CC}         NUMBER=4911111111111113
+...                   EXPIRY=0726
+...                   CVV=123
+
+${OTP}                112233
+
+${PROMO}              Potongan 10 Rupiah
+
+${MERCHANT}           Rubicon Store${SPACE}
 
 *** Keywords ***
 Open Midtrans Website

@@ -8,7 +8,7 @@ Fill User Credit Card Data
 Pick Promo
   [Arguments]   ${promo}
   Select Checkbox Promo   ${promo}
-  ${price}=   Get Promo Price   Visa
+  ${price}=   Get Promo Price   ${promo}
   ${price}=   Convert Price To Integer    ${price}
   Verify Price After Promo    ${price}
 
@@ -25,7 +25,7 @@ Submit Payment with Credit Card
   Click Button Pay Now
   Select Frame    tag=iframe
   Verify Issue Bank Page
-  Verify Merchant Name    Sample Store
+  Verify Merchant Name    ${MERCHANT}
   Verify Total Amount     ${priceAfterPromo}
   Input Field Password    ${OTP}
   Click Button OK
