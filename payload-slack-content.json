@@ -1,0 +1,36 @@
+{
+	"blocks": [
+		{
+			"type": "header",
+			"text": {
+				"type": "plain_text",
+				"text": "New Pull Request Created"
+			}
+		},
+		{
+			"type": "section",
+			"text": {
+				"type": "mrkdwn",
+				"text": "New pull request is created at *Cerberus* !\n*<https://github.com/robotframework/robotframework/pull/4434|Automatic type conversion for generic types #4434>*"
+			},
+			"fields": [
+				{
+					"type": "mrkdwn",
+					"text": "*Requester:*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": " "
+				},
+				{
+					"type": "plain_text",
+					"text": "Yayan Kuswara"
+				},
+				{
+					"type": "plain_text",
+					"text": " "
+				}
+			]
+		}
+	]
+}
