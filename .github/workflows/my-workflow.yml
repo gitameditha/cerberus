@@ -63,7 +63,7 @@ jobs:
                           },
                           {
                           "type": "plain_text",
-                          "text": "${{ github.actor }}"
+                          "text": "=${{ github.event.pull_request.user.login }}="
                           },
                           {
                           "type": "plain_text",
