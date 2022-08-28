@@ -29,6 +29,8 @@ jobs:
   post-pr-review-to-slack:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
       - name: Send Pull Request to Slack
         id: slack
         uses: slackapi/slack-github-action@v1.18.0
