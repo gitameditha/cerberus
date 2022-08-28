@@ -62,7 +62,7 @@ jobs:
                     },
                     {
                       "type": "plain_text",
-                      "text": "=${{ github.actor }}="
+                      "text": "${{ github.actor }}"
                     },
                     {
                       "type": "plain_text",
