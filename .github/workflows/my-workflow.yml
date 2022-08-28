@@ -50,14 +50,14 @@ jobs:
                         "type": "section",
                         "text": {
                             "type": "plain_text",
-                            "text": "${{ github.actor }}\n${{ github.GITHUB_REF }}\n${{ github.GITHUB_REF_NAME }}\n${{ github.GITHUB_REPOSITORY }}"
+                            "text": "${{ github.actor }}"
                         }
                     },
                     {
                         "type": "section",
                         "text": {
                             "type": "plain_text",
-                            "text": "${{ github.actor }}\n${{ github.GITHUB_REF }}\n${{ github.GITHUB_REF_NAME }}\n${{ github.GITHUB_REPOSITORY }}"
+                            "text": "${{ github.event.pull_request.number }}"
                         }
                     }
                 ]
