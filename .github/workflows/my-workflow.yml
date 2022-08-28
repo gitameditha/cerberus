@@ -57,7 +57,7 @@ jobs:
                         "type": "section",
                         "text": {
                             "type": "plain_text",
-                            "text": "${{ github.event.pull_request.number }}"
+                            "text": "${{ github.event.pull_request.html_url }}\n${{ github.event.pull_request.title }}"
                         }
                     }
                 ]
