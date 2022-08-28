@@ -50,7 +50,7 @@ jobs:
                         "type": "section",
                         "text": {
                             "type": "plain_text",
-                            "text": "${{ github.actor }}\n${{ github.ACTOR }}\n${{ GITHUB_ACTOR }}"
+                            "text": "${{ github.actor }}\n${{ github.ACTOR }}"
                         }
                     }
                 ]
