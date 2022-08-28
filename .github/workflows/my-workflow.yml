@@ -16,13 +16,24 @@ jobs:
 
       - name: Execute Dry Run for API
         run: robot --dryrun api
-      
+
       - name: Execute Dry Run for Web
         run: robot --dryrun web
-        
+
       - name: Execute Dry Run for Android
         run: robot --dryrun web
-        
+
       - name: Execute Dry Run for iOS
         run: robot --dryrun ios
 
+  post-pr-review-to-slack:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Pull Request to Slack
+        id: slack
+        uses: slackapi/slack-github-action@v1.18.0
+        with:
+          payload-file-path: "./payload-slack-content.json"
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }}
+          SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
