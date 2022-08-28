@@ -35,7 +35,26 @@ jobs:
         id: slack
         uses: slackapi/slack-github-action@v1.18.0
         with:
-          payload-file-path: "./payload-slack-content.json"
+          # payload-file-path: "./payload-slack-content.json"
+          payload: |
+            {
+                "blocks": [
+                    {
+                        "type": "header",
+                        "text": {
+                            "type": "plain_text",
+                            "text": "New Pull Request Created!"
+                        }
+                    },
+                    {
+                        "type": "section",
+                        "text": {
+                            "type": "plain_text",
+                            "text": "${{ github.actor }}\n${{ github.ACTOR }}\n${{ GITHUB_ACTOR }}"
+                        }
+                    }
+                ]
+            }
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }}
           SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
