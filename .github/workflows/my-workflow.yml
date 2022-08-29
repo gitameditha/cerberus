@@ -29,49 +29,46 @@ jobs:
   post-pr-review-to-slack:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
       - name: Send Pull Request to Slack
-        uses: slackapi/slack-github-action@v1.21.0
+        uses: slackapi/slack-github-action@v1.18.0
         with:
-            channel-id: "C039ECQR6KH"
-            payload: |
+          payload: |
+            {
+              "blocks": [
                 {
-                  "blocks": [
+                  "type": "header",
+                  "text": {
+                    "type": "plain_text",
+                    "text": "New Pull Request Created!!"
+                  }
+                },
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": "New pull request is created at *Cerberus* !\n*<${{ github.event.pull_request.html_url }}|${{ github.event.pull_request.title }}>*"
+                  },
+                  "fields": [
                     {
-                      "type": "header",
-                      "text": {
-                        "type": "plain_text",
-                        "text": "New Pull Request Created!!"
-                      }
+                      "type": "mrkdwn",
+                      "text": "*Requester:*"
                     },
                     {
-                      "type": "section",
-                      "text": {
-                        "type": "mrkdwn",
-                        "text": "New pull request is created at *Cerberus* !\n*<${{ github.event.pull_request.html_url }}|${{ github.event.pull_request.title }}>*"
-                      },
-                      "fields": [
-                        {
-                          "type": "mrkdwn",
-                          "text": "*Requester:*"
-                        },
-                        {
-                          "type": "mrkdwn",
-                          "text": " "
-                        },
-                        {
-                          "type": "plain_text",
-                          "text": "${{ github.actor }}"
-                        },
-                        {
-                          "type": "plain_text",
-                          "text": " "
-                        }
-                      ]
+                      "type": "mrkdwn",
+                      "text": " "
+                    },
+                    {
+                      "type": "plain_text",
+                      "text": "${{ github.actor }}"
+                    },
+                    {
+                      "type": "plain_text",
+                      "text": " "
                     }
                   ]
                 }
-            env:
-              SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }}
-              SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
+              ]
+            }
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }}
+          SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
